@@ -1,0 +1,79 @@
+@use "variables";
+@import "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Public Sans', sans-serif;
+    background-color: variables.$black;
+}
+
+.header {
+    width: 100%;
+    &__container {
+        margin: auto;
+        max-width: 1200px;
+        padding: 13px 8px;
+        display: flex;
+        justify-content: space-between;
+
+
+        @media (min-width: 700px){
+
+            
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3em;
+            font-weight: 200;
+            color: variables.$white;
+        }
+
+        .nav {
+
+            @media(max-width: 700px){
+                display: none;
+            }
+        }
+
+        .left {
+            .contact__header {
+                background-color: variables.$white;
+                font-weight: bold;
+                color: variables.$black;
+                padding: 6px 10px;
+                border-radius: 20px;
+                font-family: 'Public Sans', sans-serif;
+                border: none;
+            }
+
+            i {
+                @media (min-width: 700px){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+main {
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 10px;
+
+    .hero {
+        width: 100%;
+        .vertical-text {
+            
+        }
+    }
+}
