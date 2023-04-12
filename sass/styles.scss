@@ -1,5 +1,6 @@
 @use "variables";
 @import "mixins";
+@import "../node_modules/rfs/scss";
 
 * {
     margin: 0;
@@ -47,16 +48,14 @@ body {
 
         .left {
             .contact__header {
-                background-color: variables.$white;
-                font-weight: bold;
-                color: variables.$black;
-                padding: 6px 10px;
-                border-radius: 20px;
-                font-family: 'Public Sans', sans-serif;
-                border: none;
+                @include button (variables.$white, variables.$black);
             }
 
             i {
+                color: variables.$white;
+                margin-left: 10px;
+                font-size: 1.1em;
+                cursor: pointer;
                 @media (min-width: 700px){
                     display: none;
                 }
@@ -72,8 +71,114 @@ main {
 
     .hero {
         width: 100%;
-        .vertical-text {
-            
+        margin-top: 30px;
+        
+        .text {
+            display: flex;
+            width: 250px;
+            gap: 20px;
+            .vertical {
+                width: 20%;
+                display: flex;
+                align-items: flex-end;
+                .vertical-text {
+                    font-size: 0.7em;
+                    transform: rotate(-90deg);
+                    color: variables.$yellow;
+                }
+            }
+            .principal-text {
+                width: 100%;
+                .hero__title {
+                    @include font-size(3rem);
+                    color: variables.$white;
+
+                    span {
+                        font-style: italic;
+                    }
+                }
+                .secundary-text {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    @media (min-width: 700px){
+                        flex-direction: row;
+                    }
+                    .complete_text {
+                        @include font-size(2.5rem);
+                        color: variables.$white;
+                        margin-bottom: 15px;
+                    }
+                    .button-hero {
+                        @include button (variables.$orange, variables.$white);
+                        margin: auto;
+                        display: flex;
+                        font-weight: 500;
+                    }
+                    .text-serving {
+                        margin-top: 10px;
+                        text-align: center;
+                        color: variables.$grey;
+                        font-size: 0.7em;
+                    }
+                }
+            }
+
+        } 
+
+        .image-hero {
+            margin-top: 20px;
+            border-radius: 20px;
+            width: 100%;
+            height: 200px;
+            @include background(url(../Assets/hero-image.jpg));
+        }
+
+        .subtext-hero {
+            color: variables.$white;
+            margin-top: 50px;
+            font-size: 1.1em;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #303030;
+        }
+        
+    }
+    .data {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        @media(min-width: 700px){
+            flex-direction: row;
+        }
+
+        .title-data {
+            text-align: center;
+            color: variables.$white;
+            margin-bottom: 10px;
+        }
+
+        .numbers-data {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .item-data {
+                margin-bottom: 10px;
+                .number {
+                    @include font-size(1.7em);
+                    color: variables.$white;
+                    font-weight: 500;
+
+                    span {
+                        color: variables.$orange;
+                    }
+                }
+                .info-data {
+                    padding-top: 5px;
+                    font-size: 0.7em;
+                    color: variables.$grey;
+                }
+            }
         }
     }
 }

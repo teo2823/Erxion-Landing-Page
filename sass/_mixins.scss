@@ -1,0 +1,19 @@
+@use 'variables';
+
+@mixin button($bgcolor, $color){
+    background-color: $bgcolor;
+    font-weight: bold;
+    color: $color;
+    padding: 6px 10px;
+    font-size: 0.7rem;
+    border-radius: 20px;
+    font-family: 'Public Sans', sans-serif;
+    border: none;
+}
+
+@mixin background ($url){
+    background-image: $url;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
