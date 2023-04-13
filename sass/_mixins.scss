@@ -17,3 +17,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+@mixin p-text {
+    color: variables.$grey;
+    font-size: 0.8em;
+    margin-bottom: 25px;
+    font-weight: 300;
+}

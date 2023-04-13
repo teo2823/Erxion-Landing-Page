@@ -69,6 +69,8 @@ main {
     max-width: 1200px;
     padding: 0 10px;
 
+    //HERO SECTION/////////////////////
+
     .hero {
         width: 100%;
         margin-top: 30px;
@@ -143,6 +145,9 @@ main {
         }
         
     }
+
+    //DATA SECTION/////////////////////
+
     .data {
         width: 100%;
         margin-top: 20px;
@@ -178,6 +183,141 @@ main {
                     font-size: 0.7em;
                     color: variables.$grey;
                 }
+            }
+        }
+    }
+
+    //DISCOVER SECTION/////////////////////
+
+    .discover {
+        width: 100%;
+        height: 350px;
+        margin-top: 70px;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10%;
+
+            .img-discover-container {
+                @include background(url(../Assets/discover-job.jpg));
+                width: 50%;
+                height: 350px;
+                border-radius: 20px;
+
+                @media (max-width: 700px){
+                    display: none;
+                }
+            }
+            .discover-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @media(min-width: 700px){
+                    width: 50%;
+                }    
+
+                .discover-title {
+                    color: variables.$white;
+                    @include font-size(2em);
+                    margin-bottom: 20px;
+
+                    span {
+                        font-style: italic;
+                    }
+                }
+                .discover-text {
+                    @include p-text;
+                }
+                
+                .discover-list {
+                    list-style: none;
+
+                    .discover-item {
+                        color: variables.$white;
+                        display: flex;
+                        align-items: center;
+
+                        span{
+                            font-size: 2em;
+                            margin-right: 5px;
+                            color: variables.$orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //PROJECT SECTION/////////////////////
+
+    .project {
+        width: 100%;
+        margin-top: 70px;
+
+        .text-project{
+            margin-bottom: 40px;
+            @media (min-width: 700px){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .project-title {
+                color: variables.$white;
+                @include font-size(2em);
+                margin-bottom: 15px;
+            }
+            .text-project {
+                @include p-text;
+                max-width: 500px;
+                @media(min-width: 700px){
+                    width: 300px;
+
+                }
+            }
+        }
+
+        .project-photos{
+            width: 100%;
+            margin: auto;
+            @media (min-width: 700px){
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .item-project {
+                min-width: 200px;
+                max-width: 400px;
+                height: 300px;
+                margin-bottom: 25px;
+
+                img.img-project {
+                    width: 100%;
+                    height: 80%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .item-title {
+                    color: variables.$white;
+                    @include font-size(1em);
+                    font-weight: 300;
+                    margin-bottom: 10px;
+                }
+
+                .item-text {
+                    @include p-text;
+                }
+            }
+        }
+
+        .div-button-project{
+            width: 100%;
+            display: grid;
+            place-content: center;
+            .button-project {
+                @include button(variables.$orange, variables.$white);
             }
         }
     }

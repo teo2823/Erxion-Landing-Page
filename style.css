@@ -191,5 +191,147 @@ main .data .numbers-data .item-data .info-data {
   font-size: 0.7em;
   color: #9c9b9b;
 }
+main .discover {
+  width: 100%;
+  height: 350px;
+  margin-top: 70px;
+}
+main .discover__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+main .discover__container .img-discover-container {
+  background-image: url(../Assets/discover-job.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 350px;
+  border-radius: 20px;
+}
+@media (max-width: 700px) {
+  main .discover__container .img-discover-container {
+    display: none;
+  }
+}
+main .discover__container .discover-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 700px) {
+  main .discover__container .discover-container {
+    width: 50%;
+  }
+}
+main .discover__container .discover-container .discover-title {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+main .discover__container .discover-container .discover-title span {
+  font-style: italic;
+}
+main .discover__container .discover-container .discover-text {
+  color: #9c9b9b;
+  font-size: 0.8em;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+main .discover__container .discover-container .discover-list {
+  list-style: none;
+}
+main .discover__container .discover-container .discover-list .discover-item {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+main .discover__container .discover-container .discover-list .discover-item span {
+  font-size: 2em;
+  margin-right: 5px;
+  color: #FD6B2A;
+}
+main .project {
+  width: 100%;
+  margin-top: 70px;
+}
+main .project .text-project {
+  margin-bottom: 40px;
+}
+@media (min-width: 700px) {
+  main .project .text-project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main .project .text-project .project-title {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+main .project .text-project .text-project {
+  color: #9c9b9b;
+  font-size: 0.8em;
+  margin-bottom: 25px;
+  font-weight: 300;
+  max-width: 500px;
+}
+@media (min-width: 700px) {
+  main .project .text-project .text-project {
+    width: 300px;
+  }
+}
+main .project .project-photos {
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: 700px) {
+  main .project .project-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+main .project .project-photos .item-project {
+  min-width: 200px;
+  max-width: 400px;
+  height: 300px;
+  margin-bottom: 25px;
+}
+main .project .project-photos .item-project img.img-project {
+  width: 100%;
+  height: 80%;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+main .project .project-photos .item-project .item-title {
+  color: white;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+main .project .project-photos .item-project .item-text {
+  color: #9c9b9b;
+  font-size: 0.8em;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+main .project .div-button-project {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+main .project .div-button-project .button-project {
+  background-color: #FD6B2A;
+  font-weight: bold;
+  color: white;
+  padding: 6px 10px;
+  font-size: 0.7rem;
+  border-radius: 20px;
+  font-family: "Public Sans", sans-serif;
+  border: none;
+}
 
 /*# sourceMappingURL=style.css.map */
