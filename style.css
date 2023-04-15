@@ -479,5 +479,124 @@ main .clients .comments-clients .container-comments .testimonial-item .ubi-testi
   font-weight: 300;
   font-size: 0.7em;
 }
+main .gallery {
+  margin-top: 70px;
+  width: 100%;
+}
+main .gallery .gallery-title {
+  font-size: 2em;
+  color: white;
+}
+main .gallery .swiper {
+  border-radius: 20px;
+  margin: 40px auto 0 auto;
+  max-width: 950px;
+  width: 100%;
+  height: 300px;
+}
+@media (min-width: 500px) {
+  main .gallery .swiper {
+    height: 370px;
+  }
+}
+@media (min-width: 700px) {
+  main .gallery .swiper {
+    height: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  main .gallery .swiper {
+    height: 520px;
+  }
+}
+main .gallery .swiper .swiper-1 {
+  background-image: url(../Assets/carousel-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .gallery .swiper .swiper-2 {
+  background-image: url(../Assets/carousel-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .gallery .swiper .swiper-3 {
+  background-image: url(../Assets/carousel-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer {
+  border-top: 2px solid #FD6B2A;
+  background-color: black;
+  width: 100%;
+  margin: 50px auto 0px auto;
+  padding: 0 10px;
+  display: grid;
+  place-content: center;
+}
+@media (min-width: 600px) {
+  .footer {
+    display: block;
+  }
+}
+.footer .container-footer {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 600px) {
+  .footer .container-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer .container-footer .left-footer {
+  margin-bottom: 30px;
+}
+.footer .container-footer .left-footer h2.logo-footer {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 200;
+  color: white;
+}
+.footer .container-footer .container-lists {
+  gap: 30px;
+}
+@media (min-width: 600px) {
+  .footer .container-footer .container-lists {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer .container-footer .container-lists .list {
+  max-width: 230px;
+  margin-bottom: 40px;
+}
+.footer .container-footer .container-lists .list .list-title {
+  font-size: 1em;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #9c9b9b;
+  text-decoration: none;
+  font-size: 0.8em;
+  margin-bottom: 7px;
+}
+
+ul.footer-social li {
+  display: flex;
+}
+ul.footer-social li i {
+  color: #FD6B2A;
+  margin-right: 5px;
+}
 
 /*# sourceMappingURL=style.css.map */

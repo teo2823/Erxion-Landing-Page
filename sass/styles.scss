@@ -456,4 +456,120 @@ main {
             }
         }
     }
+
+    .gallery {
+        margin-top: 70px;
+        width: 100%;
+
+        .gallery-title {
+            @include font-size(2em);
+            color: variables.$white;
+        }
+
+        .swiper {
+            border-radius: 20px;
+            margin: 40px auto 0 auto;
+            max-width: 950px;
+            width: 100%;
+            height: 300px;
+
+            @media(min-width: 500px){
+                height: 370px;
+            }
+            @media(min-width: 700px){
+                height: 450px;
+            }
+
+            @media(min-width: 1200px){
+                height: 520px;
+            }
+
+            .swiper-1{
+                @include background(url(../Assets/carousel-1.jpg));
+            }
+
+            .swiper-2 {
+                @include background(url(../Assets/carousel-2.jpg));
+            }
+
+            .swiper-3 {
+                @include background(url(../Assets/carousel-3.jpg));
+            }
+        }
+
+    }
+
+}
+
+.footer {
+    border-top: 2px solid variables.$orange;
+    background-color: black;
+    width: 100%;
+    margin: 50px auto 0px auto;
+    padding: 0 10px;
+    display: grid;
+    place-content: center;
+
+    @media(min-width: 600px){
+        display: block;
+    }
+
+    .container-footer {
+        max-width: 1200px;
+        margin: 40px auto 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        @media (min-width: 600px){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .left-footer{
+            margin-bottom: 30px;
+            h2.logo-footer {
+                text-align: center;
+                font-size: 1.3em;
+                font-weight: 200;
+                color: variables.$white;
+            }
+        }
+
+        .container-lists {
+            gap: 30px;
+            @media(min-width: 600px){
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .list {
+                max-width: 230px;
+                margin-bottom: 40px;
+
+                .list-title {
+                    font-size: 1em;
+                    font-weight: 300;
+                    color: variables.$white;
+                    margin-bottom: 10px;
+
+                    
+                }
+            }
+        }
+    }
+} 
+
+ul li a {
+    color: variables.$grey;
+    text-decoration: none;
+    font-size: 0.8em;
+    margin-bottom: 7px;
+}
+
+ul.footer-social li {
+    display: flex;
+    i {
+        color: variables.$orange;
+        margin-right: 5px;
+    }
 }
