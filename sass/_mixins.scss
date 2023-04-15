@@ -24,3 +24,14 @@
     margin-bottom: 25px;
     font-weight: 300;
 }
+
+@mixin bk-plus-rest($color, $bkgrd) {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    background-color: $bkgrd;
+    color: $color;
+    border: 1px solid whitesmoke;
+    display: grid;
+    place-content: center;
+}

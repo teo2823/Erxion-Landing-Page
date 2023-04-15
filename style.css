@@ -285,26 +285,56 @@ main .project .text-project .text-project {
 }
 main .project .project-photos {
   width: 100%;
-  margin: auto;
+  display: grid;
+  place-content: center;
 }
 @media (min-width: 700px) {
   main .project .project-photos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 15px;
   }
 }
 main .project .project-photos .item-project {
   min-width: 200px;
   max-width: 400px;
-  height: 300px;
+  height: 380px;
   margin-bottom: 25px;
 }
-main .project .project-photos .item-project img.img-project {
+@media (min-width: 700px) {
+  main .project .project-photos .item-project {
+    margin-bottom: 0;
+  }
+}
+main .project .project-photos .item-project .img-project {
   width: 100%;
   height: 80%;
   margin-bottom: 10px;
   border-radius: 20px;
+}
+main .project .project-photos .item-project .img-1 {
+  background-image: url(../Assets/project-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .project .project-photos .item-project .img-2 {
+  background-image: url(../Assets/project-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .project .project-photos .item-project .img-3 {
+  background-image: url(../Assets/project-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .project .project-photos .item-project .img-4 {
+  background-image: url(../Assets/project-4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 main .project .project-photos .item-project .item-title {
   color: white;
@@ -319,6 +349,7 @@ main .project .project-photos .item-project .item-text {
   font-weight: 300;
 }
 main .project .div-button-project {
+  margin-top: 30px;
   width: 100%;
   display: grid;
   place-content: center;
@@ -332,6 +363,121 @@ main .project .div-button-project .button-project {
   border-radius: 20px;
   font-family: "Public Sans", sans-serif;
   border: none;
+}
+main .expert {
+  margin-top: 70px;
+  width: 100%;
+}
+main .expert-title {
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+@media (min-width: 700px) {
+  main .expert .container-services {
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main .expert .container-services .item-services {
+  max-width: 370px;
+}
+@media (min-width: 700px) {
+  main .expert .container-services .item-services {
+    max-width: 300px;
+  }
+}
+main .expert .container-services .item-services i {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #FD6B2A;
+}
+main .expert .container-services .item-services .service-title {
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+main .expert .container-services .item-services .text-services {
+  color: #9c9b9b;
+  font-size: 0.8em;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+main .carousel {
+  margin-top: 70px;
+  width: 100%;
+  height: 100px;
+  background-color: #FD6B2A;
+}
+main .clients {
+  margin-top: 70px;
+}
+main .clients .clients-title-plus {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+main .clients .clients-title-plus .clients-title {
+  font-size: 1.8em;
+  color: white;
+}
+main .clients .clients-title-plus .plus-rest {
+  display: flex;
+  gap: 15px;
+}
+main .clients .clients-title-plus .plus-rest .plus {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  background-color: #121418;
+  color: white;
+  border: 1px solid whitesmoke;
+  display: grid;
+  place-content: center;
+}
+main .clients .clients-title-plus .plus-rest .rest {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  background-color: white;
+  color: #121418;
+  border: 1px solid whitesmoke;
+  display: grid;
+  place-content: center;
+}
+main .clients .comments-clients {
+  margin-top: 40px;
+  width: 100%;
+}
+main .clients .comments-clients .container-comments {
+  display: flex;
+  gap: 25px;
+}
+main .clients .comments-clients .container-comments .testimonial-item {
+  width: 50%;
+}
+main .clients .comments-clients .container-comments .testimonial-item .text-testimonial {
+  color: #9c9b9b;
+  font-size: 0.8em;
+  margin-bottom: 25px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+main .clients .comments-clients .container-comments .testimonial-item .author-testimonial {
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+main .clients .comments-clients .container-comments .testimonial-item .ubi-testimonial {
+  color: #9c9b9b;
+  font-size: 0.8em;
+  margin-bottom: 25px;
+  font-weight: 300;
+  font-size: 0.7em;
 }
 
 /*# sourceMappingURL=style.css.map */
